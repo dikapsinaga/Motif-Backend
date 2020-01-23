@@ -1,0 +1,18 @@
+runtime: php72
+
+env_variables:
+  ## Put production environment variables here.
+  APP_KEY: base64:MTXi2HrvG6QYP3wgq4iKQ+GHmIPL7YCFlQ3biaKjc8k=
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  SESSION_DRIVER: cookie
+
+  GOOGLE_CLOUD_PROJECT_ID: motif-254100
+  GOOGLE_CLOUD_KEY_FILE: credentials.json
+  GOOGLE_CLOUD_STORAGE_BUCKET: laravel-app-motif
+
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_DATABASE: motif
+  DB_USERNAME: motif
+  DB_PASSWORD: motif
+  DB_SOCKET: "/cloudsql/motif-254100:asia-southeast1:motif"

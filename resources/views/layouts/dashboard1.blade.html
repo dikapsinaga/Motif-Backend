@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset('Semantic-UI-CSS-master/calendar.min.css') }}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('css/dataTables.semanticui.min.css')}}"> -->
+    <script src="Semantic-UI-CSS-master/jquery-3.3.1.min.js"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <!-- <script src="{{ asset('Semantic-UI-CSS-master/calendar.min.js') }}"></script> -->
+    <!-- <script src="{{ asset('js/jquery.dataTables.min.js')}}"></script> -->
+    <!-- <script src="{{ asset('js/dataTables.semanticui.min.js')}}"></script> -->
+
+
+    <title>App Name - @yield('title')</title>
+</head>
+
+<body>
+    <side-bar class="ui visible inverted left vertical sidebar menu">
+        <a class="item header ui" href="{{ url('/home') }}">
+            <h3 class="ui inverted header">
+                <i class="circular inverted user teal icon"></i>
+                <div class="content">
+                    Admin
+                    <div class="sub header">Admin MOTIF</div>
+                </div>
+            </h3>
+
+        </a>
+
+        <a class="item" href="dashboard.blade.html">
+            <i class="shopping basket icon"></i>Pembayaran Produk
+        </a>
+        <a class="item" href="pembayaranInvestasi.blade.html">
+            <i class="money bill alternate outline icon"></i>Pembayaran Investasi
+        </a>
+        <a class="item" href="pembayaranHasil.blade.html">
+            <i class="users icon"></i>Pembayaran Hasil
+        </a>
+
+        <a class="item" href=""
+            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            <i class="sign out icon"></i>Logout
+        </a>
+        <form id="logout-form" action="" method="POST" style="display: none;">
+        </form>
+
+    </side-bar>
+
+
+    <div class="pusher">
+        <div class="ui bottom attachment segment pushable">
+            <div class="ui header segment">
+                <!-- @yield('nav') -->
+                PEMBAYARAN PRODUK
+            </div>
+            <div class="pusher" id="main-content">
+                <!-- @yield('content') -->
+                <!-- ISI DISINI -->
+
+
+<div class="ui segment">
+
+    <table id="pasien" class="ui striped celled teal table">
+        <thead>
+            <tr>
+                <th>Pembeli</th>
+                <th>Nama Produk</th>
+                <th>Jumlah Produk</th>
+                <th>Total</th>
+                <th>Nomor Rekening Pembeli</th>
+                <th>Nama Rekening Pembeli</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="ui active button"><i class="check circle outline icon"></i>Confirm</button>
+                    <a href=""><i class="eye icon"></i></a></td>
+
+                <!-- kalau button ditekan
+                <button class="positive ui button">Positive Button</button> -->
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<style>
+    .ui.segment {
+        padding: 2em;
+    }
+
+    #button_showForm {
+        margin: 20px;
+    }
+</style>
+
+    
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .ui.header.segment {
+        margin: 0;
+        padding: 2em 2em;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0;
+
+    }
+
+    #main-content {
+        padding: 20px 40px;
+        /* padding-bottom: 0; */
+        width: 80%;
+        /* height: 500px; */
+        background-color: rgba(204, 204, 204, 0.25);
+        /* background-color: white; */
+
+    }
+
+    .pushable {
+        /* padding: 0 !important; */
+    }
+</style>
